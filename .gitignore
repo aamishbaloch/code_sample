@@ -1,0 +1,11 @@
+*.pyc
+*.idea
+error.log
+code_sample/local_settings.py
+dump.rdb
+eggs.csv
+errors_log.out
+logfile
+.DS*
+*.xml
+.idea
