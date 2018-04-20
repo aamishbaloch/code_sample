@@ -19,8 +19,7 @@ class OrganizationView(ListCreateAPIView):
     def get_queryset(self):
         active_jobs = {}
         organization_jobs = Job.objects.filter(active=True).values_list('organization_id', 'id')
-        for (organization_id, id) in organization_jobs:
-            active_jobs.setdefault(organization_id, []).append(id)
+        [active_jobs.setdefault(organization_id, []).append(id) for (organization_id, id) in organization_jobs]
         self.request.active_jobs = active_jobs
         return Organization.objects.filter(active=True)
 
