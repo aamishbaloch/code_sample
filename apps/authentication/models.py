@@ -25,12 +25,12 @@ class UserManager(BaseUserManager, QueryManager):
     def create_user(self, email=None, password=None, **extra_fields):
         extra_fields.setdefault('is_superuser', False)
         extra_fields.setdefault('is_staff', False)
-        extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('active', True)
         return self._create_user(email, password, **extra_fields)
 
     def create_superuser(self, email, password, **extra_fields):
         extra_fields.setdefault('is_superuser', True)
-        extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('active', True)
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('verified', True)
 
@@ -111,7 +111,7 @@ class User(AbstractBaseUser, PermissionsMixin, ActiveStatusModel):
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
     def status(self):
-        if self.is_active:
+        if self.active:
             return "ACTIVE"
         else:
             return "BLOCKED"

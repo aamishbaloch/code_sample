@@ -44,6 +44,7 @@ LOCAL_APPS = [
     'apps.authentication',
     'apps.job',
     'apps.organization',
+    'scripts',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
