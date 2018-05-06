@@ -6,8 +6,7 @@ from apps.base.fields import StatusField
 
 class ActiveStatusModel(models.Model):
     """
-    An abstract base class model that provides self-updating
-    ``created`` and ``modified`` fields.
+    An abstract base class model that provides active/inactive status field.
 
     """
     active = StatusField(_('active'))
