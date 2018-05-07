@@ -13,3 +13,11 @@ def str2bool(value):
 
 def get_verification_code():
     return randint(100000, 999999)
+
+
+def get_random_int():
+    return randint(100000, 999999)
+
+
+def get_random_between_given(start, end):
+    return randint(start, end)

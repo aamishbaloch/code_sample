@@ -21,7 +21,7 @@ class OrganizationView(ListCreateAPIView):
         organization_jobs = Job.objects.filter(active=True).values_list('organization_id', 'id')
         [active_jobs.setdefault(organization_id, []).append(id) for (organization_id, id) in organization_jobs]
         self.request.active_jobs = active_jobs
-        return Organization.objects.filter(active=True)
+        return Organization.objects.filter(active=True).order_by('id')
 
     def get_serializer_context(self):
         return {'request': self.request}

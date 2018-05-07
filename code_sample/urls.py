@@ -18,6 +18,7 @@ from django.contrib import admin
 
 from apps.authentication import urls as auth_urls
 from apps.organization import urls as organization_urls
+from apps.job import urls as job_urls
 from code_sample import settings
 
 
@@ -25,6 +26,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include(auth_urls)),
     url(r'^organizations/', include(organization_urls)),
+    url(r'^jobs/', include(job_urls)),
 ]
 
 if settings.DEBUG:
