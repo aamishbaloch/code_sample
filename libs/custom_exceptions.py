@@ -27,11 +27,6 @@ class InvalidVerificationCodeException(APIException):
     default_detail = "Invalid Verification Data"
 
 
-class DoctorUnavailableException(APIException):
-    status_code = 400
-    default_detail = "Doctor Not Available"
-
-
 class InvalidCredentialsException(APIException):
     status_code = 401
     default_detail = "Invalid Credentials"
@@ -49,23 +44,3 @@ class UserExistsException(AlreadyExistsException):
 class UserDoesNotExistsException(APIException):
     status_code = 404
     default_detail = "User Does Not Exists"
-
-
-class DoctorDoesNotExistsException(APIException):
-    status_code = 404
-    default_detail = "Doctor Does Not Exists"
-
-
-class PatientDoesNotExistsException(APIException):
-    status_code = 404
-    default_detail = "Patient Does Not Exists"
-
-
-class InvalidDateTimeException(APIException):
-    status_code = 400
-    default_detail = "Invalid Date Time"
-
-
-class NotificationDoesNotExistsException(APIException):
-    status_code = 404
-    default_detail = "Notification Does Not Exists"

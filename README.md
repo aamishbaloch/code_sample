@@ -6,6 +6,20 @@ django debug toolbar to check the performance and other useful packages
 are there too. A good example to start app with django using good coding
 and structural practices.
 
+Topics Covered
+--------------
+- Django Rest Framework
+- Class based views
+- Token based authentication through JWT
+- Django debug toolbar
+- Use of generics views in django rest framework
+- Error reporting through email
+- Custom exceptions
+- Custom management commands
+- Using generators for efficient memory management
+
+and more to come.
+
 Requirements
 ------------
 Code Sample is a Python Django based platform. 
